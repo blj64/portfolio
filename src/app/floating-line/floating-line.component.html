@@ -1,0 +1,25 @@
+<main class="flex flex-col p-4 snap-y snap-mandatory h-screen overflow-y-scroll">
+  <section id="section1" class="snap-start h-screen">
+    <app-offre></app-offre>
+  </section>
+  <app-section1 id="section2" class="snap-start h-screen"></app-section1>
+  <app-section2 id="section3" class="snap-start h-screen"></app-section2>
+  <app-section3 id="section4" class="snap-start h-screen"></app-section3>
+  <app-competence id="section5" class="snap-start h-screen"></app-competence>
+  <app-competence-autre id="section6" class="snap-start h-screen"></app-competence-autre>
+  <app-formation id="section7" class="snap-start h-screen"></app-formation>
+  <app-interet id="section8" class="snap-start h-screen"></app-interet>
+  <app-contact id="section9" class="snap-start h-screen"></app-contact>
+</main>
+<!-- Fixed Navigation Buttons -->
+<div class="fixed top-1/2 right-4 transform -translate-y-1/2 space-y-2  hidden md:block">
+   <div class="flex flex-col">
+    <button
+    *ngFor="let section of sections"
+    (click)="scrollToSection(section.id)"
+    class="px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+  >
+    {{ section.label }}
+  </button>
+   </div>
+</div>

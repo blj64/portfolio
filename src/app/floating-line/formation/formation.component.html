@@ -1,0 +1,49 @@
+<section class="snap-start h-screen flex flex-col justify-center items-center 
+">
+    <h1>Education</h1>
+    <div class="flex">
+        <div class="m-8 h-24 w-50 ">
+            <div *ngIf="!lycee" (click)="lyceeFlip()">
+                <img class="w-32 hover:animate-bounce" src="/stcricq.jpg" alt="Lycée StCricq">
+                <h1>Lycée Saint Cricq </h1>
+            </div>
+            <div class="bg-blue-500 p-4" *ngIf="lycee" (click)="lyceeFlip()">
+                <p>Lycée St Cricq</p>
+                <p>Bac S science de l'ingénieur</p>
+                <p>Option mathématique</p>
+                <p>Découverte de l'informatique</p>
+                <p>Projet: Skate électrique</p>
+            </div>
+        </div>
+       
+
+        <div class="m-8 h-24 w-50">
+            <div *ngIf="!cy" (click)="cyFlip()">
+                <img class="w-32 hover:animate-bounce" src="/cy.png" alt="Cy Tech">
+                <h1>Cy Tech</h1>
+            </div>
+            <div class="bg-yellow-400 p-4" *ngIf="cy" (click)="cyFlip()">
+                <p>Cy Tech</p>
+                <p>Cycle Ingénieur en master génie informatique</p>
+                <p>Ingénieurie du cliud computing</p>
+                <p> Alternance à SafranHE</p>
+                <p>Projets: Voir plus bas</p>
+    
+            </div>
+        </div>
+
+        <div class="m-8 h-24 w-50">
+            <div *ngIf="!craiova" (click)="craiovaFlip()">
+                <img class="w-32 hover:animate-bounce" src="/craiova.png" alt="Craiova">
+                <h1>Erasmus à Craiova</h1>
+
+            </div>
+            <div class="bg-red-700 p-4" *ngIf="craiova" (click)="craiovaFlip()">
+                <p>Université de Craiova</p>
+                <p>Semestre d'échange dans le cadre d'un Erasmus</p>
+                <p>Developpement web, cybersecurité, IA</p>
+                <p>Generateur de mots de passes, essaies</p>
+            </div>
+        </div>
+    </div>
+</section>

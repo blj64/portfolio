@@ -1,0 +1,23 @@
+<section
+    class="  snap-start h-screen
+    bg-pink-400 flex "
+>
+    <div 
+        class="bg-red-400 "
+    >
+        <h1>Competence</h1>
+        <button *ngIf="!competenceFull" (click)="addCompetence()">Add</button>
+        <ul>
+            <li *ngFor="let comp of displayedCompetences">
+              {{ comp }}
+            </li>
+          </ul>
+    </div>
+    <div 
+        class="bg-green-300"
+    >
+        <h1>Defaut</h1>
+        <button (click)="defaut()">Add</button>
+        <h2 *ngIf="default">Defauts non trouvé</h2>
+    </div>
+</section>

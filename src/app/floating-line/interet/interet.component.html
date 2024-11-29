@@ -1,0 +1,34 @@
+<section class="  snap-start h-screen
+">
+<p>interet works!</p>
+<div>
+    <div > 
+        <div *ngIf="!result" class="flex">
+            <img class="w-8" src="/backpoker.png" alt="">
+        <img class="w-8" src="/backpoker.png" alt="">
+        </div>
+        <img *ngIf="result" class="w-16" src="/looserPoker.png" alt="">
+    </div>
+    
+    <div>
+        <img class="w-32" src="/river.jpeg" alt="">
+    </div>
+    <div>
+        <img class="w-16" src="/pairK.png" alt="">
+    </div>
+
+    <div *ngIf="!result" >
+        <button (click)="changeResult('loose')" class="bg-red-600 p-2 mx-2">fold</button>
+        <button (click)="changeResult('win')" class="bg-red-600 p-2 mx-2">Check</button>
+        <button (click)="changeResult('win')" class="bg-red-600 p-2 mx-2">raise</button>
+    </div>
+    <div>
+        
+    </div>
+
+    <div>
+        {{result}}
+    </div>
+</div>
+
+</section>

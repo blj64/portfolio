@@ -1,0 +1,16 @@
+@keyframes star-wars-crawl {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-200%);
+    }
+  }
+
+  .animate-star-wars {
+    animation: star-wars-crawl 20s linear infinite;
+    transform-origin: center bottom;
+    perspective: 400px;
+    perspective-origin: center;
+    transform: rotateX(20deg);
+  }
