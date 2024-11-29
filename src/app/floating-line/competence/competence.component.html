@@ -1,23 +1,28 @@
 <section
     class="  snap-start h-screen
-    bg-pink-400 flex "
+     flex justify-center items-center"
 >
+<h1>Competence:</h1>
+
     <div 
-        class="bg-red-400 "
+        class=" flex"
     >
-        <h1>Competence</h1>
-        <button *ngIf="!competenceFull" (click)="addCompetence()">Add</button>
         <ul>
             <li *ngFor="let comp of displayedCompetences">
               {{ comp }}
             </li>
           </ul>
+          <button class="bg-slate-400 border-4 border-black p-3 rounded-full" *ngIf="!competenceFull" (click)="addCompetence()">+</button>
+
     </div>
     <div 
-        class="bg-green-300"
+        
     >
         <h1>Defaut</h1>
-        <button (click)="defaut()">Add</button>
-        <h2 *ngIf="default">Defauts non trouvé</h2>
+        <button class="bg-slate-400 border-4 border-black p-3 rounded-full" (click)="defaut()">+</button>
+        <div class="bg-black p-2" *ngIf="default">
+            <h2 class="text-red-600 ">Defauts non trouvés</h2>
+            <img src="/clin.gif" alt="">
+        </div>
     </div>
 </section>

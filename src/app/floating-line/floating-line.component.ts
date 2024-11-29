@@ -9,10 +9,12 @@ import { FormationComponent } from "./formation/formation.component";
 import { InteretComponent } from "./interet/interet.component";
 import { CompetenceAutreComponent } from "./competence-autre/competence-autre.component";
 import { NgFor } from '@angular/common';
+import { ProjetsComponent } from "./projets/projets.component";
+import { CvComponent } from "./cv/cv.component";
 @Component({
   selector: 'app-floating-line',
   standalone: true,
-  imports: [NgFor, Section1Component, Section2Component, Section3Component, OffreComponent, CompetenceComponent, ContactComponent, FormationComponent, InteretComponent, CompetenceAutreComponent],
+  imports: [NgFor, Section1Component, Section2Component, Section3Component, OffreComponent, CompetenceComponent, ContactComponent, FormationComponent, InteretComponent, CompetenceAutreComponent, ProjetsComponent, CvComponent],
   templateUrl: './floating-line.component.html',
   styleUrl: './floating-line.component.css'
 })
@@ -25,7 +27,11 @@ export class FloatingLineComponent {
     { id: 'section6', label: 'Compétence Autre' },
     { id: 'section7', label: 'Formation' },
     { id: 'section8', label: 'Intérêt' },
-    { id: 'section9', label: 'Contact' }
+    { id: 'section9', label: 'Projets' },
+    { id: 'section10', label: 'Contact' },
+    { id: 'section11', label: 'CV' }
+
+
   ];
 
   scrollToSection(sectionId: string): void {

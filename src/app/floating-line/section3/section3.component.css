@@ -8,7 +8,7 @@
   }
 
   .animate-star-wars {
-    animation: star-wars-crawl 20s linear infinite;
+    animation: star-wars-crawl 50s linear infinite;
     transform-origin: center bottom;
     perspective: 400px;
     perspective-origin: center;
