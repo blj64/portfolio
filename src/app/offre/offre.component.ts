@@ -11,6 +11,5 @@ export class OffreComponent {
     textArray: string[] = [
       'A la recherche DU MEILLEUR DEVELOPPEUR de ta region ?????Vous êtes tombé au bon endroit\nDescendez pour découvrir celui qui comblera vos attentes !!!',
       '', 
-      '!'
     ];
 }
