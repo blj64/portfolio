@@ -1,31 +1,40 @@
 <section
-    class="  snap-start h-screen"
+    class="  snap-start h-screen flex flex-col justify-center items-center"
 >
-    <div>
-        <a 
-            
-            href="https://www.linkedin.com/in/j%C3%A9r%C3%A9mi-lioger-bun-92a83b242?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BcQG%2FX2LxQre7tprKCCgNew%3D%3D">
-            <img 
-                class="bg-white p-6 w-14"
-                src="/linkdin.png" alt="linkdin">
-        </a>
+    <div (click)="displayContact()" class="bg-white flex">
+        <h1>></h1>
+        <h1 class="">
+            Contacts
+        </h1>
+        <h1><</h1>
     </div>
-    <div>
-        <a 
-            
-            href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3DdQw4w9WgXcQ&ved=2ahUKEwj56-r-9IGKAxWqcKQEHQnDF2kQwqsBegQIChAG&usg=AOvVaw0aHtehaphMhOCAkCydRLZU">
-            <img 
-                class="bg-white p-6 w-14"
-                src="/mail.png" alt="linkdin">
-        </a>
-    </div>
-    <div>
-        <a 
-            
-            href="https://github.com/blj64">
-            <img 
-                class="bg-white p-6 w-14"
-                src="/git.svg" alt="linkdin">
-        </a>
+    <div *ngIf="contact" class="bg-white flex p-6">
+        <div class="m-4">
+            <a 
+                
+                href="https://www.linkedin.com/in/j%C3%A9r%C3%A9mi-lioger-bun-92a83b242?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BcQG%2FX2LxQre7tprKCCgNew%3D%3D">
+                <img 
+                    class="  w-14"
+                    src="/linkdin.png" alt="linkdin">
+            </a>
+        </div>
+        <div class="m-4">
+            <a 
+                
+                href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.youtube.com/watch%3Fv%3DdQw4w9WgXcQ&ved=2ahUKEwj56-r-9IGKAxWqcKQEHQnDF2kQwqsBegQIChAG&usg=AOvVaw0aHtehaphMhOCAkCydRLZU">
+                <img 
+                    class="  w-14"
+                    src="/mail.png" alt="linkdin">
+            </a>
+        </div>
+        <div class="m-4">
+            <a 
+                
+                href="https://github.com/blj64">
+                <img 
+                    class="  w-14"
+                    src="/git.svg" alt="linkdin">
+            </a>
+        </div>
     </div>
 </section>

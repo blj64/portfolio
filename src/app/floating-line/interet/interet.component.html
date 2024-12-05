@@ -1,8 +1,8 @@
 <section class="  snap-start h-screen flex justify-center items-center
 ">
-    <div class="">
-        <div>
-            <div>
+    <div class="bg-green-500 border-xl-green-700 p-6 px-16 rounded-full flex flex-col justify-center items-center    ">
+        <div class="m-4 flex flex-col justify-center items-center">
+            <div class="m-2">
                 <div *ngIf="!result" class="flex">
                     <img class="w-8" src="/backpoker.png" alt="">
                     <img class="w-8" src="/backpoker.png" alt="">
@@ -10,17 +10,17 @@
                 <img *ngIf="result" class="w-16" src="/looserPoker.png" alt="">
             </div>
 
-            <div>
+            <div class="m-2">
                 <img class="w-32" src="/river.jpeg" alt="">
             </div>
-            <div>
+            <div class="m-2">
                 <img class="w-16" src="/pairK.png" alt="">
             </div>
 
 
 
         </div>
-        <div>
+        <div class="mx-2">
             <div *ngIf="!result">
                 <button (click)="changeResult('loose')" class="bg-red-600 p-2 mx-2">fold</button>
                 <button (click)="changeResult('win')" class="bg-red-600 p-2 mx-2">Check</button>

@@ -28,8 +28,8 @@ export class FloatingLineComponent {
     { id: 'section7', label: 'Formation' },
     { id: 'section8', label: 'Intérêt' },
     { id: 'section9', label: 'Projets' },
-    { id: 'section10', label: 'Contact' },
-    { id: 'section11', label: 'CV' }
+    { id: 'section11', label: 'CV' },
+    { id: 'section10', label: 'Contact' }
 
 
   ];

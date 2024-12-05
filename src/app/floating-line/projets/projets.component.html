@@ -1,4 +1,26 @@
 <section class="  snap-start h-screen flex justify-center items-center
-">    <p>projets works!</p>
-
+">    
+<div class="flex flex-col items-center justify-center min-h-screen ">
+    <div class="relative w-80 h-24 overflow-hidden border-2  rounded-lg">
+      <div
+        class="absolute w-full text-center text-2xl font-bold transition-transform duration-500"
+        [ngStyle]="{'transform': 'translateY(' + currentOffset + 'px)'}"
+        style="will-change: transform;"
+      >
+        <div *ngFor="let project of displayedProjects" class="h-24 flex items-center justify-center ">
+          {{ project }}
+        </div>
+      </div>
+    </div>
+    <button
+      class="mt-8 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+      (click)="spinRoulette()"
+    >
+      Tourner la roulette
+    </button>
+    <div *ngIf="selectedProject" class="mt-4 text-lg font-semibold">
+      {{ selectedProject }}
+    </div>
+  </div>
+      
 </section>
