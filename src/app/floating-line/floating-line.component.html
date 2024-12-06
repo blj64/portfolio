@@ -16,15 +16,17 @@
 
 </main>
 
-<!-- Fixed Navigation Buttons -->
-<div class="fixed top-1/2 right-4 transform -translate-y-1/2 space-y-2  hidden md:block">
-   <div class="flex flex-col">
+<!-- Navigation Buttons -->
+<div class="fixed top-1/2 right-4 transform -translate-y-1/2 space-y-2 hidden lg:block">
+  <div class="flex flex-col">
+    <img class="w-46" src="/jeremiomar.webp" alt="Lioger--Bun Jérémi">
     <button
-    *ngFor="let section of sections"
-    (click)="scrollToSection(section.id)"
-    class="px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-  >
-    {{ section.label }}
-  </button>
-   </div>
+      *ngFor="let section of sections"
+      [ngClass]="{'bg-white text-black': activeSection === section.id, 'bg-blue-500 text-white': activeSection !== section.id}"
+      (click)="scrollToSection(section.id)"
+      class="px-3 py-2 rounded hover:bg-blue-700 m-1"
+    >
+      {{ section.label }}
+    </button>
+  </div>
 </div>

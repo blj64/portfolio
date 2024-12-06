@@ -1,23 +1,43 @@
-<section
-    class="snap-start h-screen
-    ">
-    <div class="bg-violet-200">
-        <h2>Alternance SHE</h2>
-        <h3>DevOps</h3>
-        <p>Construction et améliorations de sites web. Maintenance de server</p>
-    </div>
-    <div class="bg-pink-200">
-        <h2>Stage SHE</h2>
-        <p>Optimisation des moyens et usages d'impression</p>
-    </div>
-    <div class="bg-red-200">
-        <h2>Caissier Auchan</h2>
-        <h3>Octobre 2022 - Janvier 2024</h3>
-        <p>Travail d'équipe, relation client, prise de décisions</p>
-    </div>
-    <div class="bg-green-200">
-        <h2>Interime</h2>
-        <h2>Produits capilaire en laboratoire, fruits et légumes à Carrefour, alcools à leclerc</h2>
-    </div>
+<section class="snap-start h-screen flex flex-col justify-center items-center">
+    <h1 class="font-bold text-3xl">Expériences</h1>
+    <div class="flex flex-col items-center">
+     
 
+        <div class="mt-4 bg-white p-4 rounded-md md:w-96 flex flex-col justify-center items-center">
+            <h2 class="font-bold text-xl">{{titre}}</h2>
+            <h3>{{experience}}</h3>
+        </div>
+
+        <div class=" p-4 mt-4 rounded-md shadow-md">
+            <div class="flex flex-wrap gap-4">
+                <img
+                    (click)="newExp('Participation à la construction et l’amélioration de sites web internes et externes en utilisant des frameworks modernes comme Angular et TailwindCSS. Contribution à la maintenance et l’optimisation des serveurs, avec un focus sur l’automatisation des processus de déploiement et de mise à jour via des outils tels qu’Ansible et Docker. Surveillance des performances et résolution des incidents pour assurer la fiabilité des infrastructures IT.', 'Alternance DevOps – Safran Helicopter Engines (SHE)')"
+                    class="hover:bg-zinc-300 p-2 w-24 cursor-pointer"
+                    src="/safran.png"
+                    alt="SAFRAN HELICOPTER ENGINES"
+                />
+
+                <img
+                    (click)="newExp('Octobre 2022 - Janvier 2024 Accueil et encaissement des clients tout en assurant une expérience agréable. Développement de compétences en travail d’équipe, en relation client et en prise de décisions face à des situations variées. Contribution à la fluidité des opérations et au bon fonctionnement du point de vente.', 'Caissier – Auchan')"
+                    class="hover:bg-zinc-300 p-2 w-24 cursor-pointer"
+                    src="/auchan.svg"
+                    alt="AUCHAN"
+                />
+
+                <img
+                    (click)="newExp('Participation à diverses missions : préparation et conditionnement de produits capillaires en laboratoire, gestion et mise en rayon de fruits et légumes à Carrefour, et gestion des stocks et rayons alcools à Leclerc. Développement de compétences en polyvalence, organisation et adaptation à différents environnements de travail.', 'Intérimaire')"
+                    class="hover:bg-zinc-300 p-2 w-24 cursor-pointer"
+                    src="/carrefour.png"
+                    alt="CARREFOUR"
+                />
+
+                <img
+                    (click)="newExp('Participation à diverses missions : préparation et conditionnement de produits capillaires en laboratoire, gestion et mise en rayon de fruits et légumes à Carrefour, et gestion des stocks et rayons alcools à Leclerc. Développement de compétences en polyvalence, organisation et adaptation à différents environnements de travail.', 'Intérimaire')"
+                    class="hover:bg-zinc-300 p-2 w-24 cursor-pointer"
+                    src="/leclerc.webp"
+                    alt="LECLERC"
+                />
+            </div>
+        </div>
+    </div>
 </section>

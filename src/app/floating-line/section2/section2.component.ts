@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './section2.component.css'
 })
 export class Section2Component {
-
+  experience:string = 'Appuyez sur un icone pour en savoir plus';
+  titre:string = '';
+  newExp(experience: string, titre: string) {
+    this.experience = experience
+    this.titre = titre;
+  }
 }
