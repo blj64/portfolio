@@ -15,13 +15,21 @@ export class FormationComponent {
 
   lyceeFlip() {
     this.lycee = !this.lycee
+    this.craiova = !this.craiova
+    this.cy = !this.cy
+
+
   }
 
   cyFlip() {
+    this.lycee = !this.lycee
+    this.craiova = !this.craiova
     this.cy = !this.cy
   }
 
   craiovaFlip() {
+    this.lycee = !this.lycee
     this.craiova = !this.craiova
+    this.cy = !this.cy
   }
 }

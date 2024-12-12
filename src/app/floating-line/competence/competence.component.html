@@ -1,28 +1,54 @@
 <section
-    class="  snap-start h-screen
-     flex justify-center items-center "
+  class="snap-start h-screen flex flex-col justify-center items-center space-y-6 p-4"
 >
-<h1>Competence:</h1>border-8 border-black
+  <!-- Competences List -->
+  <div 
+    class="w-full flex justify-center"
+  >
+    <ul 
+      #competencesList
+      class="bg-gray-100 border border-gray-300 rounded-lg p-4 w-full max-w-md overflow-y-auto h-48 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200"
+    >
+      <li 
+        *ngFor="let comp of displayedCompetences" 
+        class="text-center text-lg text-gray-700"
+      >
+        {{ comp }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Competences Button -->
+  <button
+    class="bg-slate-400 border-4 border-black p-3 rounded-full w-48 text-center"
+    *ngIf="!competenceFull"
+    (click)="addCompetence()"
+  >
+    Competences
+  </button>
+
+  <!-- Defauts Section -->
+  <div 
+    class="w-full flex flex-col items-center space-y-4"
+  >
+    <button
+      *ngIf="!default"
+      class="bg-slate-400 border-4 border-black p-3 rounded-full w-48 text-center"
+      (click)="defaut()"
+    >
+      Defauts
+    </button>
 
     <div 
-        class=" flex "
+      class="bg-black p-4 rounded-lg w-full max-w-md text-center" 
+      *ngIf="default"
     >
-        <ul>
-            <li *ngFor="let comp of displayedCompetences">
-              {{ comp }}
-            </li>
-          </ul>
-          <button class="bg-slate-400 border-4 border-black p-3 rounded-full" *ngIf="!competenceFull" (click)="addCompetence()">+</button>
-
+      <h2 class="text-red-600 text-lg font-bold">Defauts non trouvés</h2>
+      <img 
+        class="w-32 mx-auto" 
+        src="/clin.gif" 
+        alt="Defaut Image"
+      >
     </div>
-    <div 
-        
-    >
-        <h1>Defaut</h1>
-        <button class="bg-slate-400 border-4 border-black p-3 rounded-full" (click)="defaut()">+</button>
-        <div class="bg-black p-2" *ngIf="default">
-            <h2 class="text-red-600 ">Defauts non trouvés</h2>
-            <img src="/clin.gif" alt="">
-        </div>
-    </div>
+  </div>
 </section>

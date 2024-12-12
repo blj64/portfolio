@@ -23,11 +23,11 @@
         </div>
         <div class="mx-2">
             <div *ngIf="!result">
-                <button (click)="changeResult('loose')" class="bg-red-600 p-2 mx-2">fold</button>
+                <button (click)="changeResult('loose')" class="bg-red-600 p-2 mx-2">Fold</button>
                 <button (click)="changeResult('win')" class="bg-red-600 p-2 mx-2">Check</button>
-                <button (click)="changeResult('win')" class="bg-red-600 p-2 mx-2">raise</button>
+                <button (click)="changeResult('win')" class="bg-red-600 p-2 mx-2">Raise</button>
             </div>
-            <div>
+            <div class="text-center uppercase">
                 {{result}}
                 {{redirection}}
             </div>

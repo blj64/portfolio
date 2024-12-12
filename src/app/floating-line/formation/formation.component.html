@@ -1,51 +1,68 @@
-<section class="snap-start h-screen flex flex-col justify-center items-center 
-">
-    <div class=" flex flex-col justify-center items-center p-24">
-        <h1 class="font-bold text-2xl">Formation</h1>
-    <div class="flex ">
-        <div class=" h-24 w-50 ">
-            <div class="m-8" *ngIf="!lycee" (click)="lyceeFlip()">
-                <img class="w-32 hover:animate-bounce" src="/stcricq.jpg" alt="Lycée StCricq">
-                <h1>Lycée Saint Cricq </h1>
-            </div>
-            <div class="bg-blue-500 p-4 h-40 w-96" *ngIf="lycee" (click)="lyceeFlip()">
-                <p class="text-center">Lycée St Cricq</p>
-                <p class="text-center">Bac S science de l'ingénieur</p>
-                <p class="text-center">Option mathématique</p>
-                <p class="text-center">Découverte de l'informatique</p>
-                <p class="text-center">Projet: Skate électrique</p>
-            </div>
+<section class="snap-start h-screen flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center p-6 sm:p-24 w-full">
+      <div class="flex flex-wrap sm:flex-nowrap justify-center gap-6">
+        <!-- Lycée Section -->
+        <div class="w-full sm:w-auto flex flex-col items-center">
+          <div class="m-4" *ngIf="!lycee" (click)="lyceeFlip()">
+            <img 
+              class="w-24 sm:w-32 animate-pulse hover:animate-bounce" 
+              src="/stcricq.jpg" 
+              alt="Lycée StCricq">
+            <h1 class="text-center text-lg sm:text-xl">Lycée Saint Cricq</h1>
+          </div>
+          <div 
+            class="bg-blue-500 p-4 w-full sm:w-96 rounded-lg shadow-lg text-white" 
+            *ngIf="lycee" 
+            (click)="lyceeFlip()">
+            <p class="text-center">Lycée St Cricq</p>
+            <p class="text-center">Bac S science de l'ingénieur</p>
+            <p class="text-center">Option mathématique</p>
+            <p class="text-center">Découverte de l'informatique</p>
+            <p class="text-center">Projet: Skate électrique</p>
+          </div>
         </div>
-       
-
-        <div class=" h-24 w-50">
-            <div class="m-8" *ngIf="!cy" (click)="cyFlip()">
-                <img class="w-32 hover:animate-bounce" src="/cy.png" alt="Cy Tech">
-                <h1>Cy Tech</h1>
-            </div>
-            <div class="bg-yellow-400 p-4 h-40 w-96" *ngIf="cy" (click)="cyFlip()">
-                <p class="text-center">Cy Tech</p>
-                <p class="text-center">Cycle Ingénieur en master génie informatique</p>
-                <p class="text-center">Ingénieurie du cloud computing</p>
-                <p class="text-center"> Alternance à SafranHE</p>
-                <p class="text-center"><a href="#section9">Projets: Voir plus bas</a></p>
-    
-            </div>
+  
+        <!-- Cy Tech Section -->
+        <div class="w-full sm:w-auto flex flex-col items-center">
+          <div class="m-4" *ngIf="!cy" (click)="cyFlip()">
+            <img 
+              class="w-24 sm:w-32 animate-pulse hover:animate-bounce" 
+              src="/cy.png" 
+              alt="Cy Tech">
+            <h1 class="text-center text-lg sm:text-xl">Cy Tech</h1>
+          </div>
+          <div 
+            class="bg-yellow-400 p-4 w-full sm:w-96 rounded-lg shadow-lg text-black" 
+            *ngIf="cy" 
+            (click)="cyFlip()">
+            <p class="text-center">Cy Tech</p>
+            <p class="text-center">Cycle Ingénieur en master génie informatique</p>
+            <p class="text-center">Ingénierie du cloud computing</p>
+            <p class="text-center">Alternance à SafranHE</p>
+            <p class="text-center underline"><a href="#section9">Projets: Voir plus bas</a></p>
+          </div>
         </div>
-
-        <div class=" h-24 w-50">
-            <div class="m-8" *ngIf="!craiova" (click)="craiovaFlip()">
-                <img class="w-32 hover:animate-bounce" src="/craiova.png" alt="Craiova">
-                <h1>Erasmus à Craiova</h1>
-
-            </div>
-            <div class="bg-red-500 p-4 h-40 w-96" *ngIf="craiova" (click)="craiovaFlip()">
-                <p class="text-center">Université de Craiova</p>
-                <p class="text-center">Semestre d'échange dans le cadre d'un Erasmus</p>
-                <p class="text-center">Developpement web, cybersecurité, IA</p>
-                <p class="text-center">Generateur de mots de passes, essaies</p>
-            </div>
+  
+        <!-- Craiova Section -->
+        <div class="w-full sm:w-auto flex flex-col items-center">
+          <div class="m-4" *ngIf="!craiova" (click)="craiovaFlip()">
+            <img 
+              class="w-24 sm:w-32 animate-pulse hover:animate-bounce" 
+              src="/craiova.png" 
+              alt="Craiova">
+            <h1 class="text-center text-lg sm:text-xl">Erasmus à Craiova</h1>
+          </div>
+          <div 
+            class="bg-red-500 p-4 w-full sm:w-96 rounded-lg shadow-lg text-white" 
+            *ngIf="craiova" 
+            (click)="craiovaFlip()">
+            <p class="text-center">Université de Craiova</p>
+            <p class="text-center">Semestre d'échange dans le cadre d'un Erasmus</p>
+            <p class="text-center">Développement web, cybersécurité, IA</p>
+            <p class="text-center">Générateur de mots de passe, essais</p>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-</section>
+  </section>
+  

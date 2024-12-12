@@ -14,7 +14,10 @@ export class ProjetsComponent {
     'Gestionnaire serveurs Minecraft (en cours)',
     'Discord-like (en cours)',
     'Application de messagerie (en cours)',
-    'Where is my dads (en cours)'
+    'Where is my dads (en cours)',
+    'Jeu de la vie',
+    'Portfolio',
+    'Reconnaissance faciale'
   ];
 
   displayedProjects: string[] = [];

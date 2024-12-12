@@ -1,23 +1,33 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
-import { CompetenceComponent } from './competence.component';
+@Component({
+  selector: 'app-competence',
+  templateUrl: './competence.component.html',
+  styleUrls: ['./competence.component.css']
+})
+export class CompetenceComponent {
+  displayedCompetences: string[] = [];
+  competenceFull = false;
+  default = false;
 
-describe('CompetenceComponent', () => {
-  let component: CompetenceComponent;
-  let fixture: ComponentFixture<CompetenceComponent>;
+  @ViewChild('competencesList') competencesList!: ElementRef;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [CompetenceComponent]
-    })
-    .compileComponents();
+  addCompetence() {
+    // Add a new competence if the list isn't full
+    if (this.displayedCompetences.length < 10) { // Example condition
+      this.displayedCompetences.push(`Competence ${this.displayedCompetences.length + 1}`);
+      this.scrollToBottom();
+    } else {
+      this.competenceFull = true;
+    }
+  }
 
-    fixture = TestBed.createComponent(CompetenceComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  defaut() {
+    this.default = true;
+  }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  scrollToBottom() {
+    const element = this.competencesList.nativeElement;
+    element.scrollTop = element.scrollHeight; // Scroll to the bottom of the list
+  }
+}

@@ -19,10 +19,12 @@
 <!-- Navigation Buttons -->
 <div class="fixed top-1/2 right-4 transform -translate-y-1/2 space-y-2 hidden lg:block">
   <div class="flex flex-col">
-    <img class="w-46" src="/jeremiomar.webp" alt="Lioger--Bun Jérémi">
+    <img class="w-34 m-2 rounded-full" src="/jeremiomar.webp" alt="Lioger--Bun Jérémi">
+    <h2 class="text-white text-center font-bold">Jérémi</h2>
+    <h2 class="text-white text-center font-bold">LIOGER--BUN</h2>
     <button
       *ngFor="let section of sections"
-      [ngClass]="{'bg-white text-black': activeSection === section.id, 'bg-blue-500 text-white': activeSection !== section.id}"
+      [ngClass]="{'bg-white text-black': activeSection === section.id, ' text-white': activeSection !== section.id}"
       (click)="scrollToSection(section.id)"
       class="px-3 py-2 rounded hover:bg-blue-700 m-1"
     >
